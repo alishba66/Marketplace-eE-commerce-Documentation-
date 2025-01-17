@@ -1,0 +1,163 @@
+const Product = {
+    name: 'product',
+    title: 'Product',
+    type: 'document',
+    fields: [
+      {
+        name: 'name',
+        title: 'Name',
+        type: 'string',
+      },
+      {
+        name: 'description',
+        title: 'Description',
+        type: 'text',
+            },
+      {
+        name: 'category',
+        title: 'Category',
+        type: 'reference',
+      },
+      {
+        name: 'price',
+        title: 'Price',
+        type: 'number',    },
+      {
+        name: 'stock',
+        title: 'Stock',
+        type: 'number',
+      },
+      {
+        name: 'image',
+        title: 'Image',
+        type: 'image',
+      },
+    ],
+  };
+  
+  
+//   Category Schema
+const cvategory = {
+    name: 'category',
+    title: 'Category',
+    type: 'document',
+    fields: [
+      {
+        name: 'name',
+        title: 'Name',
+        type: 'string',
+      },
+ 
+  {
+        name: 'description',
+        title: 'Description',
+        type: 'text',
+      },
+    ],
+  };
+//   User Schema
+  
+  const user= {
+    name: 'user',
+    title: 'User',
+    type: 'document',
+    fields: [
+      {
+        name: 'username',
+        title: 'Username',
+        type: 'string',
+      },
+      {
+        name: 'email',
+        title: 'Email',
+        type: 'string',
+        },
+      {
+        name: 'password',
+        title: 'Password',
+        type: 'string',
+               },
+    ],
+  };
+  // Order Schema
+ const order= {
+    name: 'order',
+    title: 'Order',
+    type: 'document',
+    fields: [
+      {
+        name: 'user',
+        title: 'User',
+        type: 'reference',
+      },
+      {
+        name: 'totalAmount',
+        title: 'Total Amount',
+        type: 'number',
+      },
+      {
+        name: 'paymentMethod',
+        title: 'Payment Method',
+        type: 'string',
+        options: {
+          list: [
+            { title: 'Credit Card', value: 'credit_card' },
+            { title: 'PayPal', value: 'paypal' },
+            { title: 'Cash on Delivery', value: 'cash_on_delivery' },
+          ],
+        },
+      },
+      {
+        name: 'shippingAddress',
+        title: 'Shipping Address',
+        type: 'text',
+      },
+      {
+        name: 'orderStatus',
+        title: 'Order Status',
+        type: 'string',
+        options: {
+          list: [
+            { title: 'Pending', value: 'pending' },
+            { title: 'Shipped', value: 'shipped' },
+            { title: 'Delivered', value: 'delivered' },
+            { title: 'Cancelled', value: 'cancelled' },
+          ],
+        },
+      },
+    ],
+  };
+  
+  
+  
+  
+//   Order Item Schema
+  
+  
+const Order ={
+    name: 'orderItem',
+    title: 'Order Item',
+    type: 'document',
+    fields: [
+      {
+        name: 'product',
+        title: 'Product',
+        type: 'reference',
+      },
+      {
+        name: 'quantity',
+        title: 'Quantity',
+        type: 'number',
+      },
+      {
+        name: 'price',
+        title: 'Price',
+        type: 'number',
+      },
+      {
+        name: 'total',
+        title: 'Total',
+        type: 'number',
+      },
+    ],
+  };
