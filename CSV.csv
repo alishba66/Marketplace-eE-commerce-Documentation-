@@ -1,0 +1,8 @@
+s.no,Test case ID,Test case description,Test steps,Expected result,Actual result,status,Severity level,Remarks
+1,TC01,Product listing page,On Nav-bar click on products the prduct listing page appears,Products display smoothly,Products display smoothly,passed,low,No issue
+2,TC02,Test API error handling,Disconnect API refresh page,Show fallback UI with error message,Error shown,passed,low,Handle gracefully
+3,TC03,Cart functionality,Products add in cart and also remove,Cart update when add products,Cart update when add the products,passed,low,Work properly
+4,TC04,Ensure responsiveness on mobile and other devices,Resize browser window/check layout,Layout adjust on every device,Layout adjust on every device,passed,low,Handle gracefully
+,,,,,,,,
+,,,,,,,,
+ ,,,,,,,,
